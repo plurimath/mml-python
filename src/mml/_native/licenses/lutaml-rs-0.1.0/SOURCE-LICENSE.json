@@ -1,0 +1,10 @@
+{
+  "package": "lutaml-rs",
+  "version": "0.1.0",
+  "spdx": "BSD-2-Clause",
+  "source": null,
+  "source_revision": "4863160dff8a7099f2481e11ab7357d5b626dc25",
+  "manifest_sha256": "b108f0cbb58d48dd0efe3729d0f3defd0c7d5e22c8c03a3ed8968a354d7a6d33",
+  "notice": "Upstream source declares SPDX metadata and has no standalone license or notice file.",
+  "source_patch_sha256": "40126984bc1b6087fbf27cf42d773e4299ffae1a7687e07671c145c010346bb5"
+}

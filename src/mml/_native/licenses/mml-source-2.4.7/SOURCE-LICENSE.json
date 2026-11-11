@@ -1,0 +1,8 @@
+{
+  "package": "mml",
+  "version": "2.4.7",
+  "spdx": "BSD-2-Clause",
+  "source": "https://github.com/plurimath/mml",
+  "source_revision": "4231da997ae02b3bae38a723884fc425352b58fa",
+  "notice": "Source gemspec declares SPDX metadata; no standalone license or notice file is present."
+}

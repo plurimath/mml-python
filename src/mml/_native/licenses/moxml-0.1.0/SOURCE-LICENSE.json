@@ -1,0 +1,9 @@
+{
+  "package": "moxml",
+  "version": "0.1.0",
+  "spdx": "MIT",
+  "source": "git+https://github.com/lutaml/moxml-rs?rev=c55a7ecf60764d75a7a0ef54f0e483ec40df4b73#c55a7ecf60764d75a7a0ef54f0e483ec40df4b73",
+  "source_revision": null,
+  "manifest_sha256": "fffbbf2737dcb92754b6ac916e5e7483b131eea0798ed4e62f4190f858c31520",
+  "notice": "Upstream source declares SPDX metadata and has no standalone license or notice file."
+}

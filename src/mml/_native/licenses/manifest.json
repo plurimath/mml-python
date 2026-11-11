@@ -1,0 +1,202 @@
+[
+  {
+    "name": "aho-corasick",
+    "version": "1.1.5",
+    "license": "Unlicense OR MIT",
+    "notices": {
+      "aho-corasick-1.1.5/COPYING": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f",
+      "aho-corasick-1.1.5/LICENSE-MIT": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "equivalent",
+    "version": "1.0.3",
+    "license": "Apache-2.0 OR MIT",
+    "notices": {
+      "equivalent-1.0.3/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "equivalent-1.0.3/LICENSE-MIT": "7365cc8878a1d7ce155a58c4ca09c3d7a6be413efa5334a80ea842912b669349"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "hashbrown",
+    "version": "0.17.1",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "hashbrown-0.17.1/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "hashbrown-0.17.1/LICENSE-MIT": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "indexmap",
+    "version": "2.14.2",
+    "license": "Apache-2.0 OR MIT",
+    "notices": {
+      "indexmap-2.14.2/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "indexmap-2.14.2/LICENSE-MIT": "ecc269ef87fd38a1d98e30bfac9ba964a9dbd9315c3770fed98d4d7cb5882055"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "itoa",
+    "version": "1.0.18",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "itoa-1.0.18/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "itoa-1.0.18/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "memchr",
+    "version": "2.8.3",
+    "license": "Unlicense OR MIT",
+    "notices": {
+      "memchr-2.8.3/COPYING": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f",
+      "memchr-2.8.3/LICENSE-MIT": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "moxml",
+    "version": "0.1.0",
+    "license": "MIT",
+    "notices": {
+      "moxml-0.1.0/Cargo.toml": "fffbbf2737dcb92754b6ac916e5e7483b131eea0798ed4e62f4190f858c31520",
+      "moxml-0.1.0/SOURCE-LICENSE.json": "87c43c7c099b414023c7926d3b54482c546915b53c37dfd30beb9e40f87d5c19"
+    },
+    "spdx_only": true
+  },
+  {
+    "name": "num-bigint",
+    "version": "0.4.6",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "num-bigint-0.4.6/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "num-bigint-0.4.6/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "num-integer",
+    "version": "0.1.47",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "num-integer-0.1.47/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "num-integer-0.1.47/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "num-rational",
+    "version": "0.4.2",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "num-rational-0.4.2/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "num-rational-0.4.2/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "num-traits",
+    "version": "0.2.19",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "num-traits-0.2.19/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "num-traits-0.2.19/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "regex",
+    "version": "1.13.1",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "regex-1.13.1/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "regex-1.13.1/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "regex-automata",
+    "version": "0.4.18",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "regex-automata-0.4.18/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "regex-automata-0.4.18/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "regex-syntax",
+    "version": "0.8.11",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "regex-syntax-0.8.11/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "regex-syntax-0.8.11/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "ryu",
+    "version": "1.0.23",
+    "license": "Apache-2.0 OR BSL-1.0",
+    "notices": {
+      "ryu-1.0.23/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "ryu-1.0.23/LICENSE-BOOST": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "serde",
+    "version": "1.0.219",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "serde-1.0.219/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "serde-1.0.219/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "serde_derive",
+    "version": "1.0.219",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "serde_derive-1.0.219/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "serde_derive-1.0.219/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "serde_json",
+    "version": "1.0.140",
+    "license": "MIT OR Apache-2.0",
+    "notices": {
+      "serde_json-1.0.140/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "serde_json-1.0.140/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "spdx_only": false
+  },
+  {
+    "name": "lutaml-rs",
+    "version": "0.1.0",
+    "license": "BSD-2-Clause",
+    "notices": {
+      "lutaml-rs-0.1.0/Cargo.toml": "b108f0cbb58d48dd0efe3729d0f3defd0c7d5e22c8c03a3ed8968a354d7a6d33",
+      "lutaml-rs-0.1.0/SOURCE-LICENSE.json": "c71bdc34220c0e65338d73778f1c59b2653066e7a1168cf3315baa250873cd5b"
+    },
+    "spdx_only": true
+  },
+  {
+    "name": "mml-source",
+    "version": "2.4.7",
+    "license": "BSD-2-Clause",
+    "spdx_only": true,
+    "notices": {
+      "mml-source-2.4.7/mml.gemspec": "0956fbcc27d3f81f087b5581899af6e5e0da6be279acac58af28e1d664850d34",
+      "mml-source-2.4.7/SOURCE-LICENSE.json": "92350e13daac7a8696f469554c671d489ad9c1035cdc74521299583f9109264c"
+    }
+  }
+]

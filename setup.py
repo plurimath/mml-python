@@ -20,7 +20,10 @@ for version in (3, 4):
 setup(
     name="mml", version="0.1.0",
     description="Native generated MathML models and XML codecs",
+    license="BSD-2-Clause",
     packages=find_packages("src"), package_dir={"": "src"},
-    package_data={"mml": ["_native/*.so", "_native/provenance.json"]},
+    package_data={"mml": ["_native/*.so", "_native/provenance.json",
+                          "_native/licenses/manifest.json",
+                          "_native/licenses/*/*"]},
     python_requires=">=3.10", cmdclass={"bdist_wheel": NativeWheel},
 )
