@@ -1,0 +1,27 @@
+{
+  "package": "mml",
+  "planned_repository": "plurimath/mml-python",
+  "qualified_source_head": "828ee64a80025bb156f15df061116475e7ead5b7",
+  "rust_toolchain": "1.95.0",
+  "native": {
+    "kind": "mml-dual",
+    "repository": "plurimath/mml-rs",
+    "local": "workspace/xml-native/mml-rs",
+    "revision": "58e7a3242baf7b0f1b1c78c9aa1ec7f116a41b3b",
+    "public": false,
+    "framework": {
+      "repository": "lutaml/lutaml-model",
+      "revision": "694f9275f9718e67b1b3e3d736902f0ab38896eb",
+      "public": true
+    }
+  },
+  "data": null,
+  "tests": [
+    "tests/test_native.py"
+  ],
+  "python_runtime": {
+    "repository": "parsanol/parsanol-python",
+    "revision": "7bb1e554ec29dcd82ee7a2c467bc46309170ceeb",
+    "note": "only for packages that load Parsanol at runtime; none of these five does (native stages are self-contained)"
+  }
+}
