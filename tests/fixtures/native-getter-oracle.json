@@ -1,0 +1,605 @@
+{
+  "rows": [
+    {
+      "id": "v3-mi-mixed",
+      "version": 3,
+      "model": "Mi",
+      "snapshot": {
+        "class": "Mml::V3::Mi",
+        "attributes": {
+          "value": [
+            "x",
+            "y",
+            "z"
+          ],
+          "mglyph_value": [
+            {
+              "class": "Mml::V3::Mglyph",
+              "attributes": {
+                "alt": "g",
+                "src": "g.png"
+              },
+              "order": []
+            }
+          ],
+          "malignmark_value": [
+            {
+              "class": "Mml::V3::Malignmark",
+              "attributes": {},
+              "order": []
+            }
+          ]
+        },
+        "order": [
+          [
+            "text",
+            "x"
+          ],
+          [
+            "element",
+            "malignmark"
+          ],
+          [
+            "text",
+            "y"
+          ],
+          [
+            "element",
+            "mglyph"
+          ],
+          [
+            "text",
+            "z"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "v3-mi-prefixed",
+      "version": 3,
+      "model": "Mi",
+      "snapshot": {
+        "class": "Mml::V3::Mi",
+        "attributes": {
+          "value": [
+            "alpha"
+          ],
+          "mathvariant": "bold"
+        },
+        "order": [
+          [
+            "text",
+            "alpha"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "v3-math-nested",
+      "version": 3,
+      "model": "Math",
+      "snapshot": {
+        "class": "Mml::V3::Math",
+        "attributes": {
+          "mrow_value": [
+            {
+              "class": "Mml::V3::Mrow",
+              "attributes": {
+                "mfrac_value": [
+                  {
+                    "class": "Mml::V3::Mfrac",
+                    "attributes": {
+                      "mrow_value": [
+                        {
+                          "class": "Mml::V3::Mrow",
+                          "attributes": {
+                            "mo_value": [
+                              {
+                                "class": "Mml::V3::Mo",
+                                "attributes": {
+                                  "value": [
+                                    "+"
+                                  ]
+                                },
+                                "order": [
+                                  [
+                                    "text",
+                                    "+"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "mn_value": [
+                              {
+                                "class": "Mml::V3::Mn",
+                                "attributes": {
+                                  "value": [
+                                    "1"
+                                  ]
+                                },
+                                "order": [
+                                  [
+                                    "text",
+                                    "1"
+                                  ]
+                                ]
+                              },
+                              {
+                                "class": "Mml::V3::Mn",
+                                "attributes": {
+                                  "value": [
+                                    "2"
+                                  ]
+                                },
+                                "order": [
+                                  [
+                                    "text",
+                                    "2"
+                                  ]
+                                ]
+                              }
+                            ]
+                          },
+                          "order": [
+                            [
+                              "element",
+                              "mn"
+                            ],
+                            [
+                              "element",
+                              "mo"
+                            ],
+                            [
+                              "element",
+                              "mn"
+                            ]
+                          ]
+                        }
+                      ],
+                      "mi_value": [
+                        {
+                          "class": "Mml::V3::Mi",
+                          "attributes": {
+                            "value": [
+                              "x",
+                              "y"
+                            ],
+                            "malignmark_value": [
+                              {
+                                "class": "Mml::V3::Malignmark",
+                                "attributes": {},
+                                "order": []
+                              }
+                            ]
+                          },
+                          "order": [
+                            [
+                              "text",
+                              "x"
+                            ],
+                            [
+                              "element",
+                              "malignmark"
+                            ],
+                            [
+                              "text",
+                              "y"
+                            ]
+                          ]
+                        }
+                      ]
+                    },
+                    "order": [
+                      [
+                        "element",
+                        "mi"
+                      ],
+                      [
+                        "element",
+                        "mrow"
+                      ]
+                    ]
+                  }
+                ],
+                "mi_value": [
+                  {
+                    "class": "Mml::V3::Mi",
+                    "attributes": {
+                      "value": [
+                        "a"
+                      ]
+                    },
+                    "order": [
+                      [
+                        "text",
+                        "a"
+                      ]
+                    ]
+                  },
+                  {
+                    "class": "Mml::V3::Mi",
+                    "attributes": {
+                      "value": [
+                        "b"
+                      ]
+                    },
+                    "order": [
+                      [
+                        "text",
+                        "b"
+                      ]
+                    ]
+                  }
+                ],
+                "mo_value": [
+                  {
+                    "class": "Mml::V3::Mo",
+                    "attributes": {
+                      "value": [
+                        "+"
+                      ]
+                    },
+                    "order": [
+                      [
+                        "text",
+                        "+"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "order": [
+                [
+                  "element",
+                  "mi"
+                ],
+                [
+                  "element",
+                  "mo"
+                ],
+                [
+                  "element",
+                  "mfrac"
+                ],
+                [
+                  "element",
+                  "mi"
+                ]
+              ]
+            }
+          ],
+          "mi_value": [
+            {
+              "class": "Mml::V3::Mi",
+              "attributes": {
+                "value": [
+                  "c"
+                ]
+              },
+              "order": [
+                [
+                  "text",
+                  "c"
+                ]
+              ]
+            }
+          ],
+          "display": "block"
+        },
+        "order": [
+          [
+            "element",
+            "mrow"
+          ],
+          [
+            "element",
+            "mi"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "v4-mi-mixed",
+      "version": 4,
+      "model": "Mi",
+      "snapshot": {
+        "class": "Mml::V4::Mi",
+        "attributes": {
+          "value": [
+            "x",
+            "y",
+            "z"
+          ],
+          "mglyph_value": [
+            {
+              "class": "Mml::V4::Mglyph",
+              "attributes": {
+                "alt": "g",
+                "src": "g.png"
+              },
+              "order": []
+            }
+          ],
+          "malignmark_value": [
+            {
+              "class": "Mml::V4::Malignmark",
+              "attributes": {},
+              "order": []
+            }
+          ]
+        },
+        "order": [
+          [
+            "text",
+            "x"
+          ],
+          [
+            "element",
+            "malignmark"
+          ],
+          [
+            "text",
+            "y"
+          ],
+          [
+            "element",
+            "mglyph"
+          ],
+          [
+            "text",
+            "z"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "v4-mi-prefixed",
+      "version": 4,
+      "model": "Mi",
+      "snapshot": {
+        "class": "Mml::V4::Mi",
+        "attributes": {
+          "value": [
+            "alpha"
+          ],
+          "mathvariant": "bold"
+        },
+        "order": [
+          [
+            "text",
+            "alpha"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "v4-math-nested",
+      "version": 4,
+      "model": "Math",
+      "snapshot": {
+        "class": "Mml::V4::Math",
+        "attributes": {
+          "mrow_value": [
+            {
+              "class": "Mml::V4::Mrow",
+              "attributes": {
+                "mfrac_value": [
+                  {
+                    "class": "Mml::V4::Mfrac",
+                    "attributes": {
+                      "mrow_value": [
+                        {
+                          "class": "Mml::V4::Mrow",
+                          "attributes": {
+                            "mo_value": [
+                              {
+                                "class": "Mml::V4::Mo",
+                                "attributes": {
+                                  "value": [
+                                    "+"
+                                  ]
+                                },
+                                "order": [
+                                  [
+                                    "text",
+                                    "+"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "mn_value": [
+                              {
+                                "class": "Mml::V4::Mn",
+                                "attributes": {
+                                  "value": [
+                                    "1"
+                                  ]
+                                },
+                                "order": [
+                                  [
+                                    "text",
+                                    "1"
+                                  ]
+                                ]
+                              },
+                              {
+                                "class": "Mml::V4::Mn",
+                                "attributes": {
+                                  "value": [
+                                    "2"
+                                  ]
+                                },
+                                "order": [
+                                  [
+                                    "text",
+                                    "2"
+                                  ]
+                                ]
+                              }
+                            ]
+                          },
+                          "order": [
+                            [
+                              "element",
+                              "mn"
+                            ],
+                            [
+                              "element",
+                              "mo"
+                            ],
+                            [
+                              "element",
+                              "mn"
+                            ]
+                          ]
+                        }
+                      ],
+                      "mi_value": [
+                        {
+                          "class": "Mml::V4::Mi",
+                          "attributes": {
+                            "value": [
+                              "x",
+                              "y"
+                            ],
+                            "malignmark_value": [
+                              {
+                                "class": "Mml::V4::Malignmark",
+                                "attributes": {},
+                                "order": []
+                              }
+                            ]
+                          },
+                          "order": [
+                            [
+                              "text",
+                              "x"
+                            ],
+                            [
+                              "element",
+                              "malignmark"
+                            ],
+                            [
+                              "text",
+                              "y"
+                            ]
+                          ]
+                        }
+                      ]
+                    },
+                    "order": [
+                      [
+                        "element",
+                        "mi"
+                      ],
+                      [
+                        "element",
+                        "mrow"
+                      ]
+                    ]
+                  }
+                ],
+                "mi_value": [
+                  {
+                    "class": "Mml::V4::Mi",
+                    "attributes": {
+                      "value": [
+                        "a"
+                      ]
+                    },
+                    "order": [
+                      [
+                        "text",
+                        "a"
+                      ]
+                    ]
+                  },
+                  {
+                    "class": "Mml::V4::Mi",
+                    "attributes": {
+                      "value": [
+                        "b"
+                      ]
+                    },
+                    "order": [
+                      [
+                        "text",
+                        "b"
+                      ]
+                    ]
+                  }
+                ],
+                "mo_value": [
+                  {
+                    "class": "Mml::V4::Mo",
+                    "attributes": {
+                      "value": [
+                        "+"
+                      ]
+                    },
+                    "order": [
+                      [
+                        "text",
+                        "+"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "order": [
+                [
+                  "element",
+                  "mi"
+                ],
+                [
+                  "element",
+                  "mo"
+                ],
+                [
+                  "element",
+                  "mfrac"
+                ],
+                [
+                  "element",
+                  "mi"
+                ]
+              ]
+            }
+          ],
+          "mi_value": [
+            {
+              "class": "Mml::V4::Mi",
+              "attributes": {
+                "value": [
+                  "c"
+                ]
+              },
+              "order": [
+                [
+                  "text",
+                  "c"
+                ]
+              ]
+            }
+          ],
+          "display": "block"
+        },
+        "order": [
+          [
+            "element",
+            "mrow"
+          ],
+          [
+            "element",
+            "mi"
+          ]
+        ]
+      }
+    }
+  ],
+  "source": {
+    "mml_revision": "4231da997ae02b3bae38a723884fc425352b58fa",
+    "framework_revision": "694f9275f9718e67b1b3e3d736902f0ab38896eb",
+    "method": "direct typed getters, absent/nil/empty omitted, exact numeric scalar spellings; element_order retained separately"
+  }
+}

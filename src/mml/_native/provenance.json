@@ -1,0 +1,63 @@
+{
+  "format": "mml-native-python/1",
+  "snapshot_profile": "mml-typed-model-snapshot-v1",
+  "scalar_encoding": "portable-exact-json-v1",
+  "presence": "absent omitted; null and present empty values retained",
+  "libraries": {
+    "3": {
+      "file": "libmml_native_v3.so",
+      "sha256": "dc9b899fd3894ae67f714e8f7a3a8e8bbe3a92a783a246ae479b893c99274853",
+      "bytes": 72345704
+    },
+    "4": {
+      "file": "libmml_native_v4.so",
+      "sha256": "79da11d6ed78bcd25c3e249bb371295ba41e3c5a1f02d55c3b74417224f5e7b2",
+      "bytes": 63375792
+    }
+  },
+  "model_manifest": {
+    "format": "mml-portable-models/1",
+    "source_repository": "https://github.com/plurimath/mml",
+    "source_revision": "a88197810737e7eb809bbb5f887703a25beac3db",
+    "source_version": "2.4.7",
+    "framework_repository": "https://github.com/lutaml/lutaml-model",
+    "framework_revision": "fd2989fd8478b1ecb2508d98fa2d66792c09c72b",
+    "framework_status": "open candidate; not a released dependency",
+    "versions": {
+      "3": {
+        "path": "mathml-v3.bundle.json",
+        "sha256": "ee79ea4bcc910f91f1b118ae0accc5baeb058501c76f4d233e5c4724ef74aab4",
+        "bundle_checksum": "sha256:23bc156260b4dab3933351dadbae27a8f146c239875c630b2d76adcb27b778a4",
+        "models": 194,
+        "root": "Mml::V3::Math@mml_v3",
+        "capabilities": [
+          "xml"
+        ]
+      },
+      "4": {
+        "path": "mathml-v4.bundle.json",
+        "sha256": "7b1041645156d9df7b94a8c9c3acce6256b12d1df5f6cc611d39465e0556e26a",
+        "bundle_checksum": "sha256:5b823b450161072ff2adbdf4cf5b765909f4c85a7ea4e53dd17706a86165404c",
+        "models": 195,
+        "root": "Mml::V4::Math@mml_v4",
+        "capabilities": [
+          "xml"
+        ]
+      }
+    }
+  },
+  "runtime_framework_base": "4863160dff8a7099f2481e11ab7357d5b626dc25",
+  "runtime_sdk_sha256": "6ff7eb42135b225b6c4f5fe0a58402bbc2fbc711b33ca5a1e3def334f607e7f6",
+  "native_abi_source_sha256": "751983d783f3a8ccb1b4c460753e2d7299b635dc0ee4468daf4ae959e8ca9455",
+  "source_compatibility_gaps": [
+    "Ruby integer input cast rounds above IEEE754 exact range; native exact integer retains decimal value",
+    "Ruby empty Mi getter value is [empty string]; native absent content stays absent",
+    "Ruby unset scalar getters return null; native field presence distinguishes absent",
+    "Ruby ordinary/portable JSON contracts are independent of this typed snapshot"
+  ],
+  "rust_source_commit": "1ef5600093538ee0b1f8d7a7d55b4fbff8be0a41",
+  "snapshot_sources": {
+    "3": "c8292869401e2ee7068d98e60f63990cd17bfb8e7a1056fd726275f96389eb29",
+    "4": "e3757a0c6081a7eb4d893064c553b51c591a4fea07400655b3df98117b167a6b"
+  }
+}

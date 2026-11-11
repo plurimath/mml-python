@@ -1,0 +1,46 @@
+{
+  "Mml::V3::Malignmark": {},
+  "Mml::V3::Math": {
+    "mi_value": "mi",
+    "mrow_value": "mrow"
+  },
+  "Mml::V3::Mfrac": {
+    "mi_value": "mi",
+    "mrow_value": "mrow"
+  },
+  "Mml::V3::Mglyph": {},
+  "Mml::V3::Mi": {
+    "malignmark_value": "malignmark",
+    "mglyph_value": "mglyph"
+  },
+  "Mml::V3::Mn": {},
+  "Mml::V3::Mo": {},
+  "Mml::V3::Mrow": {
+    "mfrac_value": "mfrac",
+    "mi_value": "mi",
+    "mn_value": "mn",
+    "mo_value": "mo"
+  },
+  "Mml::V4::Malignmark": {},
+  "Mml::V4::Math": {
+    "mi_value": "mi",
+    "mrow_value": "mrow"
+  },
+  "Mml::V4::Mfrac": {
+    "mi_value": "mi",
+    "mrow_value": "mrow"
+  },
+  "Mml::V4::Mglyph": {},
+  "Mml::V4::Mi": {
+    "malignmark_value": "malignmark",
+    "mglyph_value": "mglyph"
+  },
+  "Mml::V4::Mn": {},
+  "Mml::V4::Mo": {},
+  "Mml::V4::Mrow": {
+    "mfrac_value": "mfrac",
+    "mi_value": "mi",
+    "mn_value": "mn",
+    "mo_value": "mo"
+  }
+}
