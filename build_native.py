@@ -28,6 +28,8 @@ def main():
     environment["CARGO_PROFILE_DEV_DEBUG"] = "0"
     environment["CARGO_PROFILE_DEV_CODEGEN_UNITS"] = "64"
     environment["CARGO_INCREMENTAL"] = "0"
+    if sys.platform == "win32":
+        environment["CARGO_PROFILE_DEV_OPT_LEVEL"] = "1"
     filename = ("mml_native.dll" if sys.platform == "win32"
                 else "libmml_native.dylib" if sys.platform == "darwin"
                 else "libmml_native.so")
@@ -40,7 +42,9 @@ def main():
             "--target-dir", str(target), "--no-default-features",
             "--features", f"v{version}",
         ], env=environment, check=True)
-        library = destination / f"libmml_native_v{version}.so"
+        packaged_filename = (f"mml_native_v{version}.dll" if sys.platform == "win32"
+                             else f"libmml_native_v{version}.so")
+        library = destination / packaged_filename
         shutil.copy2(target / "debug" / filename, library)
         libraries[str(version)] = {
             "file": library.name,

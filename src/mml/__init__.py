@@ -3,6 +3,7 @@
 import ctypes
 import json
 from pathlib import Path
+import sys
 import threading
 import weakref
 
@@ -22,7 +23,9 @@ class NativeError(ValueError):
 
 class _Runtime:
     def __init__(self, version):
-        path = Path(__file__).parent / "_native" / f"libmml_native_v{version}.so"
+        filename = (f"mml_native_v{version}.dll" if sys.platform == "win32"
+                    else f"libmml_native_v{version}.so")
+        path = Path(__file__).parent / "_native" / filename
         self.library = ctypes.CDLL(str(path))
         for name in ("mml_native_info", "mml_native_parse",
                      "mml_native_snapshot", "mml_native_xml"):

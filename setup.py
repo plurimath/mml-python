@@ -1,4 +1,5 @@
 from pathlib import Path
+import sys
 from setuptools import setup, find_packages
 from wheel.bdist_wheel import bdist_wheel
 
@@ -13,7 +14,9 @@ class NativeWheel(bdist_wheel):
 
 root = Path(__file__).parent
 for version in (3, 4):
-    library = root / "src" / "mml" / "_native" / f"libmml_native_v{version}.so"
+    filename = (f"mml_native_v{version}.dll" if sys.platform == "win32"
+                else f"libmml_native_v{version}.so")
+    library = root / "src" / "mml" / "_native" / filename
     if not library.is_file():
         raise RuntimeError(f"Build the MathML v{version} native library before packaging")
 
@@ -22,7 +25,7 @@ setup(
     description="Native generated MathML models and XML codecs",
     license="BSD-2-Clause",
     packages=find_packages("src"), package_dir={"": "src"},
-    package_data={"mml": ["_native/*.so", "_native/provenance.json",
+    package_data={"mml": ["_native/*.so", "_native/*.dll", "_native/provenance.json",
                           "_native/licenses/manifest.json",
                           "_native/licenses/*/*"]},
     python_requires=">=3.10", cmdclass={"bdist_wheel": NativeWheel},

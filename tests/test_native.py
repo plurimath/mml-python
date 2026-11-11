@@ -69,7 +69,7 @@ def compare_getters(test, expected, actual, names, counts):
 
 class NativeMathMLTest(unittest.TestCase):
     def test_native_xml_and_reused_handle(self):
-        corpus = json.loads((FIXTURES / "native-xml-cases.json").read_text())
+        corpus = json.loads((FIXTURES / "native-xml-cases.json").read_text(encoding="utf-8"))
         for row in corpus["rows"]:
             with self.subTest(row["id"]):
                 with parse(row["input"], version=row["version"],
@@ -86,10 +86,10 @@ class NativeMathMLTest(unittest.TestCase):
                                      xml_tree(row["expected_xml"]))
 
     def test_source_getters_and_mixed_order(self):
-        corpus = json.loads((FIXTURES / "native-xml-cases.json").read_text())
-        oracles = json.loads((FIXTURES / "native-getter-oracle.json").read_text())
+        corpus = json.loads((FIXTURES / "native-xml-cases.json").read_text(encoding="utf-8"))
+        oracles = json.loads((FIXTURES / "native-getter-oracle.json").read_text(encoding="utf-8"))
         expected = {row["id"]: row["snapshot"] for row in oracles["rows"]}
-        names = json.loads((FIXTURES / "xml-member-names.json").read_text())
+        names = json.loads((FIXTURES / "xml-member-names.json").read_text(encoding="utf-8"))
         counts = {"models": 0, "ordered_models": 0, "leaf_values": 0}
         for row in corpus["rows"]:
             with self.subTest(row["id"]):
