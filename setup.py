@@ -27,6 +27,7 @@ setup(
     packages=find_packages("src"), package_dir={"": "src"},
     package_data={"mml": ["_native/*.so", "_native/*.dll", "_native/provenance.json",
                           "_native/licenses/manifest.json",
-                          "_native/licenses/*/*"]},
+                          "_native/licenses/*/*", "_native/runtime-licenses/manifest.json",
+                          "_native/runtime-licenses/*/*"]},
     python_requires=">=3.10", cmdclass={"bdist_wheel": NativeWheel},
 )

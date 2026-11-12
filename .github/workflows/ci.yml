@@ -26,6 +26,8 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: '1.95.0'
+      - name: Verify native notice provenance helpers
+        run: python -m unittest discover -s tests -p test_build_native.py -v
       - name: Build the pinned public native library once
         run: python scripts/ci.py build-native
       - uses: actions/upload-artifact@v4

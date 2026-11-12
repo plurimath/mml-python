@@ -5,3 +5,5 @@
 .native/
 .native-src/
 dist/
+
+__pycache__/
