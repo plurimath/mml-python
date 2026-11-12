@@ -1,0 +1,14 @@
+{
+  "source_artifact": "handoffs/N-mml-rust/native-spec-corpus.json",
+  "sha256": "ea7beb5f3692b4ec67217672a77f314e02af49a8014220c706295597dd75d3d0",
+  "ruby_model_source": "4231da997ae02b3bae38a723884fc425352b58fa",
+  "ruby_framework_source": "eff859d0f6c2bb0936dd3add8ee252aea9dbaa17",
+  "policy": "first three unique static XML string expressions per v3/v4 spec file, wrapped fragments, bounded80elements/8000bytes",
+  "case_count": 204,
+  "versions": {
+    "3": 111,
+    "4": 93
+  },
+  "expected_bytes_unchanged": true,
+  "comparison": "Namespace-prefix equivalence and structural indentation only; lexical attributes and leaf text/CDATA preserved by existing xml_tree helper."
+}

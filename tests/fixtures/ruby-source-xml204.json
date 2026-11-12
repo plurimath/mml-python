@@ -1,0 +1,1642 @@
+{
+  "source": "/home/apple/projects/plurimath-org/workspace/math/mml",
+  "source_sha": "4231da997ae02b3bae38a723884fc425352b58fa",
+  "framework_sha": "eff859d0f6c2bb0936dd3add8ee252aea9dbaa17",
+  "policy": "first three unique static XML string expressions per v3/v4 spec file, wrapped fragments, bounded80elements/8000bytes",
+  "rows": [
+    {
+      "id": "v3/apply/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><plus/><ci>x</ci><cn>1</cn></apply></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <apply>\n    <plus/>\n    <ci>x</ci>\n    <cn>1</cn>\n  </apply>\n</math>",
+      "source": "spec/mml/v3/apply_spec.rb"
+    },
+    {
+      "id": "v3/apply/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><plus/><apply><sin/><ci>x</ci></apply><cn>5</cn></apply></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <apply>\n    <plus/>\n    <apply>\n      <sin/>\n      <ci>x</ci>\n    </apply>\n    <cn>5</cn>\n  </apply>\n</math>",
+      "source": "spec/mml/v3/apply_spec.rb"
+    },
+    {
+      "id": "v3/ci/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ci>x</ci></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <ci>x</ci>\n</math>",
+      "source": "spec/mml/v3/ci_spec.rb"
+    },
+    {
+      "id": "v3/ci/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ci>f</ci></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <ci>f</ci>\n</math>",
+      "source": "spec/mml/v3/ci_spec.rb"
+    },
+    {
+      "id": "v3/cn/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><cn>42</cn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <cn>42</cn>\n</math>",
+      "source": "spec/mml/v3/cn_spec.rb"
+    },
+    {
+      "id": "v3/cn/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><cn>3.14</cn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <cn>3.14</cn>\n</math>",
+      "source": "spec/mml/v3/cn_spec.rb"
+    },
+    {
+      "id": "v3/csymbol/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><csymbol>sin</csymbol></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <csymbol>sin</csymbol>\n</math>",
+      "source": "spec/mml/v3/csymbol_spec.rb"
+    },
+    {
+      "id": "v3/csymbol/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><csymbol definitionURL=\"http://example.org/def\">sin</csymbol></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <csymbol definitionURL=\"http://example.org/def\">sin</csymbol>\n</math>",
+      "source": "spec/mml/v3/csymbol_spec.rb"
+    },
+    {
+      "id": "v3/maction/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><maction actiontype=\"toggle\"><mi>x</mi><mi>y</mi></maction></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <maction actiontype=\"toggle\">\n    <mi>x</mi>\n    <mi>y</mi>\n  </maction>\n</math>",
+      "source": "spec/mml/v3/maction_spec.rb"
+    },
+    {
+      "id": "v3/maction/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><maction actiontype=\"toggle\"><mi>x</mi></maction></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <maction actiontype=\"toggle\">\n    <mi>x</mi>\n  </maction>\n</math>",
+      "source": "spec/mml/v3/maction_spec.rb"
+    },
+    {
+      "id": "v3/maction/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><maction actiontype=\"toggle\" selection=\"2\"><mi>x</mi><mi>y</mi></maction></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <maction actiontype=\"toggle\" selection=\"2\">\n    <mi>x</mi>\n    <mi>y</mi>\n  </maction>\n</math>",
+      "source": "spec/mml/v3/maction_spec.rb"
+    },
+    {
+      "id": "v3/maligngroup/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><maligngroup/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <maligngroup/>\n</math>",
+      "source": "spec/mml/v3/maligngroup_spec.rb"
+    },
+    {
+      "id": "v3/maligngroup/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><maligngroup groupalign=\"left\"/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <maligngroup groupalign=\"left\"/>\n</math>",
+      "source": "spec/mml/v3/maligngroup_spec.rb"
+    },
+    {
+      "id": "v3/malignmark/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><malignmark/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <malignmark/>\n</math>",
+      "source": "spec/mml/v3/malignmark_spec.rb"
+    },
+    {
+      "id": "v3/math/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"/>",
+      "source": "spec/mml/v3/math_spec.rb"
+    },
+    {
+      "id": "v3/math/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mi>x</mi>\n</math>",
+      "source": "spec/mml/v3/math_spec.rb"
+    },
+    {
+      "id": "v3/math/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi><mo>+</mo><mn>1</mn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mi>x</mi>\n  <mo>+</mo>\n  <mn>1</mn>\n</math>",
+      "source": "spec/mml/v3/math_spec.rb"
+    },
+    {
+      "id": "v3/menclose/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><menclose notation=\"circle\"><mi>r</mi></menclose></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <menclose notation=\"circle\">\n    <mi>r</mi>\n  </menclose>\n</math>",
+      "source": "spec/mml/v3/menclose_spec.rb"
+    },
+    {
+      "id": "v3/menclose/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><menclose notation=\"box circle\"><mi>r</mi></menclose></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <menclose notation=\"box circle\">\n    <mi>r</mi>\n  </menclose>\n</math>",
+      "source": "spec/mml/v3/menclose_spec.rb"
+    },
+    {
+      "id": "v3/merror/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><merror><mtext>Error</mtext></merror></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <merror>\n    <mtext>Error</mtext>\n  </merror>\n</math>",
+      "source": "spec/mml/v3/merror_spec.rb"
+    },
+    {
+      "id": "v3/merror/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><merror><mtext>Error message</mtext></merror></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <merror>\n    <mtext>Error message</mtext>\n  </merror>\n</math>",
+      "source": "spec/mml/v3/merror_spec.rb"
+    },
+    {
+      "id": "v3/merror/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><merror><mi>x</mi><mo>!</mo></merror></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <merror>\n    <mi>x</mi>\n    <mo>!</mo>\n  </merror>\n</math>",
+      "source": "spec/mml/v3/merror_spec.rb"
+    },
+    {
+      "id": "v3/mfenced/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfenced open=\"(\" close=\")\"><mi>x</mi></mfenced></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfenced open=\"(\" close=\")\">\n    <mi>x</mi>\n  </mfenced>\n</math>",
+      "source": "spec/mml/v3/mfenced_spec.rb"
+    },
+    {
+      "id": "v3/mfenced/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfenced open=\"(\" close=\")\"><mi>x</mi><mo>+</mo><mi>y</mi></mfenced></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfenced open=\"(\" close=\")\">\n    <mi>x</mi>\n    <mo>+</mo>\n    <mi>y</mi>\n  </mfenced>\n</math>",
+      "source": "spec/mml/v3/mfenced_spec.rb"
+    },
+    {
+      "id": "v3/mfenced/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfenced open=\"[\" close=\"]\"><mi>x</mi></mfenced></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfenced open=\"[\" close=\"]\">\n    <mi>x</mi>\n  </mfenced>\n</math>",
+      "source": "spec/mml/v3/mfenced_spec.rb"
+    },
+    {
+      "id": "v3/mfrac/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac><mn>1</mn><mn>2</mn></mfrac></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfrac>\n    <mn>1</mn>\n    <mn>2</mn>\n  </mfrac>\n</math>",
+      "source": "spec/mml/v3/mfrac_spec.rb"
+    },
+    {
+      "id": "v3/mfrac/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac><mi>a</mi><mi>b</mi></mfrac></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfrac>\n    <mi>a</mi>\n    <mi>b</mi>\n  </mfrac>\n</math>",
+      "source": "spec/mml/v3/mfrac_spec.rb"
+    },
+    {
+      "id": "v3/mfrac/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mi>b</mi></mfrac></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfrac>\n    <mrow>\n      <mn>1</mn>\n      <mo>+</mo>\n      <mi>x</mi>\n    </mrow>\n    <mi>b</mi>\n  </mfrac>\n</math>",
+      "source": "spec/mml/v3/mfrac_spec.rb"
+    },
+    {
+      "id": "v3/mglyph/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mglyph src=\"glyph.png\" alt=\"glyph\"/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mglyph src=\"glyph.png\" alt=\"glyph\"/>\n</math>",
+      "source": "spec/mml/v3/mglyph_spec.rb"
+    },
+    {
+      "id": "v3/mi/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>sin</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mi>sin</mi>\n</math>",
+      "source": "spec/mml/v3/mi_spec.rb"
+    },
+    {
+      "id": "v3/mi/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>D</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mi>D</mi>\n</math>",
+      "source": "spec/mml/v3/mi_spec.rb"
+    },
+    {
+      "id": "v3/mlabeledtr/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mlabeledtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mlabeledtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mlabeledtr>\n      <mtd>\n        <mi>c</mi>\n      </mtd>\n      <mtd>\n        <mi>d</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v3/mlabeledtr_spec.rb"
+    },
+    {
+      "id": "v3/mlongdiv/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mlongdiv><msgroup><msrow><mn>1</mn><mo>+</mo><mn>2</mn></msrow></msgroup></mlongdiv></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mlongdiv>\n    <msgroup>\n      <msrow>\n        <mn>1</mn>\n        <mo>+</mo>\n        <mn>2</mn>\n      </msrow>\n    </msgroup>\n  </mlongdiv>\n</math>",
+      "source": "spec/mml/v3/mlongdiv_spec.rb"
+    },
+    {
+      "id": "v3/mlongdiv/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mlongdiv longdivstyle=\"right\"><msgroup><msrow><mn>1</mn></msrow></msgroup></mlongdiv></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mlongdiv longdivstyle=\"right\">\n    <msgroup>\n      <msrow>\n        <mn>1</mn>\n      </msrow>\n    </msgroup>\n  </mlongdiv>\n</math>",
+      "source": "spec/mml/v3/mlongdiv_spec.rb"
+    },
+    {
+      "id": "v3/mmultiscripts/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mmultiscripts><mi>x</mi><mprescripts/><none/><mn>2</mn></mmultiscripts></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mmultiscripts>\n    <mi>x</mi>\n    <mprescripts/>\n    <none/>\n    <mn>2</mn>\n  </mmultiscripts>\n</math>",
+      "source": "spec/mml/v3/mmultiscripts_spec.rb"
+    },
+    {
+      "id": "v3/mmultiscripts/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mmultiscripts><mi>x</mi><mn>1</mn><mn>2</mn></mmultiscripts></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mmultiscripts>\n    <mi>x</mi>\n    <mn>1</mn>\n    <mn>2</mn>\n  </mmultiscripts>\n</math>",
+      "source": "spec/mml/v3/mmultiscripts_spec.rb"
+    },
+    {
+      "id": "v3/mn/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>2</mn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mn>2</mn>\n</math>",
+      "source": "spec/mml/v3/mn_spec.rb"
+    },
+    {
+      "id": "v3/mn/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>0.123</mn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mn>0.123</mn>\n</math>",
+      "source": "spec/mml/v3/mn_spec.rb"
+    },
+    {
+      "id": "v3/mn/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>1,000,000</mn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mn>1,000,000</mn>\n</math>",
+      "source": "spec/mml/v3/mn_spec.rb"
+    },
+    {
+      "id": "v3/mnone/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><none/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <none/>\n</math>",
+      "source": "spec/mml/v3/mnone_spec.rb"
+    },
+    {
+      "id": "v3/mo/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>+</mo></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mo>+</mo>\n</math>",
+      "source": "spec/mml/v3/mo_spec.rb"
+    },
+    {
+      "id": "v3/mo/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>-</mo></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mo>-</mo>\n</math>",
+      "source": "spec/mml/v3/mo_spec.rb"
+    },
+    {
+      "id": "v3/mo/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>(</mo></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mo>(</mo>\n</math>",
+      "source": "spec/mml/v3/mo_spec.rb"
+    },
+    {
+      "id": "v3/mover/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mover><mo>)</mo><mo>&#x203E;</mo></mover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mover>\n    <mo>)</mo>\n    <mo>‾</mo>\n  </mover>\n</math>",
+      "source": "spec/mml/v3/mover_spec.rb"
+    },
+    {
+      "id": "v3/mover/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mover><mo>∫</mo><mi>b</mi></mover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mover>\n    <mo>∫</mo>\n    <mi>b</mi>\n  </mover>\n</math>",
+      "source": "spec/mml/v3/mover_spec.rb"
+    },
+    {
+      "id": "v3/mover/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mover accent=\"true\"><mi>x</mi><mo>&#x005E;</mo></mover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mover accent=\"true\">\n    <mi>x</mi>\n    <mo>^</mo>\n  </mover>\n</math>",
+      "source": "spec/mml/v3/mover_spec.rb"
+    },
+    {
+      "id": "v3/mpadded/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mpadded width=\"+0.5em\"><mi>z</mi></mpadded></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mpadded width=\"+0.5em\">\n    <mi>z</mi>\n  </mpadded>\n</math>",
+      "source": "spec/mml/v3/mpadded_spec.rb"
+    },
+    {
+      "id": "v3/mpadded/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mpadded height=\"+1em\"><mi>z</mi></mpadded></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mpadded height=\"+1em\">\n    <mi>z</mi>\n  </mpadded>\n</math>",
+      "source": "spec/mml/v3/mpadded_spec.rb"
+    },
+    {
+      "id": "v3/mpadded/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mpadded depth=\"+0.5em\"><mi>z</mi></mpadded></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mpadded depth=\"+0.5em\">\n    <mi>z</mi>\n  </mpadded>\n</math>",
+      "source": "spec/mml/v3/mpadded_spec.rb"
+    },
+    {
+      "id": "v3/mphantom/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mphantom><mi>hidden</mi></mphantom></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mphantom>\n    <mi>hidden</mi>\n  </mphantom>\n</math>",
+      "source": "spec/mml/v3/mphantom_spec.rb"
+    },
+    {
+      "id": "v3/mphantom/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mphantom><mi>x</mi><mo>+</mo><mn>1</mn></mphantom></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mphantom>\n    <mi>x</mi>\n    <mo>+</mo>\n    <mn>1</mn>\n  </mphantom>\n</math>",
+      "source": "spec/mml/v3/mphantom_spec.rb"
+    },
+    {
+      "id": "v3/mprescripts/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mmultiscripts><mi>x</mi><mprescripts/><none/></mmultiscripts></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mmultiscripts>\n    <mi>x</mi>\n    <mprescripts/>\n    <none/>\n  </mmultiscripts>\n</math>",
+      "source": "spec/mml/v3/mprescripts_spec.rb"
+    },
+    {
+      "id": "v3/mroot/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mroot><mi>x</mi><mn>3</mn></mroot></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mroot>\n    <mi>x</mi>\n    <mn>3</mn>\n  </mroot>\n</math>",
+      "source": "spec/mml/v3/mroot_spec.rb"
+    },
+    {
+      "id": "v3/mroot/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mroot><mi>x</mi><mi>n</mi></mroot></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mroot>\n    <mi>x</mi>\n    <mi>n</mi>\n  </mroot>\n</math>",
+      "source": "spec/mml/v3/mroot_spec.rb"
+    },
+    {
+      "id": "v3/mroot/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mroot><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mn>3</mn></mroot></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mroot>\n    <mrow>\n      <mi>x</mi>\n      <mo>+</mo>\n      <mn>1</mn>\n    </mrow>\n    <mn>3</mn>\n  </mroot>\n</math>",
+      "source": "spec/mml/v3/mroot_spec.rb"
+    },
+    {
+      "id": "v3/mrow/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow></mrow></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mrow/>\n</math>",
+      "source": "spec/mml/v3/mrow_spec.rb"
+    },
+    {
+      "id": "v3/mrow/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mrow>\n    <mi>x</mi>\n    <mo>+</mo>\n    <mn>1</mn>\n  </mrow>\n</math>",
+      "source": "spec/mml/v3/mrow_spec.rb"
+    },
+    {
+      "id": "v3/mrow/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>x</mi><mo>+</mo><mrow><mi>a</mi><mo>/</mo><mi>b</mi></mrow></mrow></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mrow>\n    <mi>x</mi>\n    <mo>+</mo>\n    <mrow>\n      <mi>a</mi>\n      <mo>/</mo>\n      <mi>b</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "source": "spec/mml/v3/mrow_spec.rb"
+    },
+    {
+      "id": "v3/ms/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ms>hello</ms></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <ms>hello</ms>\n</math>",
+      "source": "spec/mml/v3/ms_spec.rb"
+    },
+    {
+      "id": "v3/ms/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ms></ms></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <ms></ms>\n</math>",
+      "source": "spec/mml/v3/ms_spec.rb"
+    },
+    {
+      "id": "v3/ms/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ms>test</ms></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <ms>test</ms>\n</math>",
+      "source": "spec/mml/v3/ms_spec.rb"
+    },
+    {
+      "id": "v3/mscarries/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mscarries><mscarry><mn>1</mn></mscarry></mscarries></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mscarries>\n    <mscarry>\n      <mn>1</mn>\n    </mscarry>\n  </mscarries>\n</math>",
+      "source": "spec/mml/v3/mscarries_spec.rb"
+    },
+    {
+      "id": "v3/mscarry/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><mscarries><mscarry><mn>1</mn></mscarry></mscarries></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <mscarries>\n      <mscarry>\n        <mn>1</mn>\n      </mscarry>\n    </mscarries>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/mscarry_spec.rb"
+    },
+    {
+      "id": "v3/mscarry/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><mscarries><mscarry location=\"n\"><mn>1</mn></mscarry></mscarries></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <mscarries>\n      <mscarry location=\"n\">\n        <mn>1</mn>\n      </mscarry>\n    </mscarries>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/mscarry_spec.rb"
+    },
+    {
+      "id": "v3/msgroup/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msgroup><msrow><mn>1</mn><mo>+</mo><mn>2</mn></msrow></msgroup></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msgroup>\n      <msrow>\n        <mn>1</mn>\n        <mo>+</mo>\n        <mn>2</mn>\n      </msrow>\n    </msgroup>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/msgroup_spec.rb"
+    },
+    {
+      "id": "v3/msgroup/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msgroup position=\"1\"><msrow><mn>1</mn></msrow></msgroup></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msgroup position=\"1\">\n      <msrow>\n        <mn>1</mn>\n      </msrow>\n    </msgroup>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/msgroup_spec.rb"
+    },
+    {
+      "id": "v3/msgroup/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msgroup shift=\"2\"><msrow><mn>1</mn></msrow></msgroup></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msgroup shift=\"2\">\n      <msrow>\n        <mn>1</mn>\n      </msrow>\n    </msgroup>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/msgroup_spec.rb"
+    },
+    {
+      "id": "v3/msline/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msline/></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msline/>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/msline_spec.rb"
+    },
+    {
+      "id": "v3/msline/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msline position=\"1\"/></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msline position=\"1\"/>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/msline_spec.rb"
+    },
+    {
+      "id": "v3/msline/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msline length=\"3\"/></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msline length=\"3\"/>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/msline_spec.rb"
+    },
+    {
+      "id": "v3/mspace/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mspace width=\"1em\"/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mspace width=\"1em\"/>\n</math>",
+      "source": "spec/mml/v3/mspace_spec.rb"
+    },
+    {
+      "id": "v3/mspace/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mspace width=\"2em\"/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mspace width=\"2em\"/>\n</math>",
+      "source": "spec/mml/v3/mspace_spec.rb"
+    },
+    {
+      "id": "v3/mspace/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mspace height=\"1em\"/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mspace height=\"1em\"/>\n</math>",
+      "source": "spec/mml/v3/mspace_spec.rb"
+    },
+    {
+      "id": "v3/msqrt/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msqrt><mi>x</mi></msqrt></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msqrt>\n    <mi>x</mi>\n  </msqrt>\n</math>",
+      "source": "spec/mml/v3/msqrt_spec.rb"
+    },
+    {
+      "id": "v3/msqrt/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msqrt><mo>-</mo><mn>1</mn></msqrt></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msqrt>\n    <mo>-</mo>\n    <mn>1</mn>\n  </msqrt>\n</math>",
+      "source": "spec/mml/v3/msqrt_spec.rb"
+    },
+    {
+      "id": "v3/msqrt/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msqrt><mi>x</mi><msqrt><mi>y</mi></msqrt></msqrt></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msqrt>\n    <mi>x</mi>\n    <msqrt>\n      <mi>y</mi>\n    </msqrt>\n  </msqrt>\n</math>",
+      "source": "spec/mml/v3/msqrt_spec.rb"
+    },
+    {
+      "id": "v3/msrow/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msrow><mn>1</mn><mo>+</mo><mn>2</mn></msrow></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msrow>\n      <mn>1</mn>\n      <mo>+</mo>\n      <mn>2</mn>\n    </msrow>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/msrow_spec.rb"
+    },
+    {
+      "id": "v3/msrow/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msrow position=\"2\"><mn>1</mn></msrow></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msrow position=\"2\">\n      <mn>1</mn>\n    </msrow>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/msrow_spec.rb"
+    },
+    {
+      "id": "v3/mstack/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msrow><mn>1</mn><mo>+</mo><mn>2</mn></msrow><msline/><msrow><mn>3</mn></msrow></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msrow>\n      <mn>1</mn>\n      <mo>+</mo>\n      <mn>2</mn>\n    </msrow>\n    <msline/>\n    <msrow>\n      <mn>3</mn>\n    </msrow>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/mstack_spec.rb"
+    },
+    {
+      "id": "v3/mstack/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack align=\"right\"><msrow><mn>1</mn></msrow></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack align=\"right\">\n    <msrow>\n      <mn>1</mn>\n    </msrow>\n  </mstack>\n</math>",
+      "source": "spec/mml/v3/mstack_spec.rb"
+    },
+    {
+      "id": "v3/mstyle/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstyle></mstyle></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstyle/>\n</math>",
+      "source": "spec/mml/v3/mstyle_spec.rb"
+    },
+    {
+      "id": "v3/mstyle/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstyle mathcolor=\"red\"><mi>y</mi></mstyle></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstyle mathcolor=\"red\">\n    <mi>y</mi>\n  </mstyle>\n</math>",
+      "source": "spec/mml/v3/mstyle_spec.rb"
+    },
+    {
+      "id": "v3/mstyle/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstyle displaystyle=\"true\"><mi>y</mi></mstyle></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstyle displaystyle=\"true\">\n    <mi>y</mi>\n  </mstyle>\n</math>",
+      "source": "spec/mml/v3/mstyle_spec.rb"
+    },
+    {
+      "id": "v3/msub/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>a</mi><mn>1</mn></msub></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msub>\n    <mi>a</mi>\n    <mn>1</mn>\n  </msub>\n</math>",
+      "source": "spec/mml/v3/msub_spec.rb"
+    },
+    {
+      "id": "v3/msub/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>m</mi><mrow><mn>1</mn><mo>&#x2063;</mo><mn>2</mn></mrow></msub></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msub>\n    <mi>m</mi>\n    <mrow>\n      <mn>1</mn>\n      <mo>⁣</mo>\n      <mn>2</mn>\n    </mrow>\n  </msub>\n</math>",
+      "source": "spec/mml/v3/msub_spec.rb"
+    },
+    {
+      "id": "v3/msub/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub subscriptshift=\"0.5em\"><mi>x</mi><mn>1</mn></msub></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msub subscriptshift=\"0.5em\">\n    <mi>x</mi>\n    <mn>1</mn>\n  </msub>\n</math>",
+      "source": "spec/mml/v3/msub_spec.rb"
+    },
+    {
+      "id": "v3/msubsup/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msubsup>\n    <mi>x</mi>\n    <mn>1</mn>\n    <mn>2</mn>\n  </msubsup>\n</math>",
+      "source": "spec/mml/v3/msubsup_spec.rb"
+    },
+    {
+      "id": "v3/msubsup/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mi>i</mi><mi>j</mi></msubsup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msubsup>\n    <mi>x</mi>\n    <mi>i</mi>\n    <mi>j</mi>\n  </msubsup>\n</math>",
+      "source": "spec/mml/v3/msubsup_spec.rb"
+    },
+    {
+      "id": "v3/msubsup/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup subscriptshift=\"0.5em\" superscriptshift=\"0.5em\"><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msubsup subscriptshift=\"0.5em\" superscriptshift=\"0.5em\">\n    <mi>x</mi>\n    <mn>1</mn>\n    <mn>2</mn>\n  </msubsup>\n</math>",
+      "source": "spec/mml/v3/msubsup_spec.rb"
+    },
+    {
+      "id": "v3/msup/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msup><mi>x</mi><mn>2</mn></msup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msup>\n    <mi>x</mi>\n    <mn>2</mn>\n  </msup>\n</math>",
+      "source": "spec/mml/v3/msup_spec.rb"
+    },
+    {
+      "id": "v3/msup/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msup><mi>x</mi><mi>n</mi></msup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msup>\n    <mi>x</mi>\n    <mi>n</mi>\n  </msup>\n</math>",
+      "source": "spec/mml/v3/msup_spec.rb"
+    },
+    {
+      "id": "v3/msup/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msup superscriptshift=\"0.3em\"><mi>x</mi><mn>2</mn></msup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msup superscriptshift=\"0.3em\">\n    <mi>x</mi>\n    <mn>2</mn>\n  </msup>\n</math>",
+      "source": "spec/mml/v3/msup_spec.rb"
+    },
+    {
+      "id": "v3/mtable/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr>\n      <mtd>\n        <mi>a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v3/mtable_spec.rb"
+    },
+    {
+      "id": "v3/mtable/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr>\n      <mtd>\n        <mn>1</mn>\n      </mtd>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n    </mtr>\n    <mtr>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n      <mtd>\n        <mn>1</mn>\n      </mtd>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n    </mtr>\n    <mtr>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n      <mtd>\n        <mn>1</mn>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v3/mtable_spec.rb"
+    },
+    {
+      "id": "v3/mtable/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable align=\"center\"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable align=\"center\">\n    <mtr>\n      <mtd>\n        <mi>a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v3/mtable_spec.rb"
+    },
+    {
+      "id": "v3/mtd/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr><mtd rowalign=\"top\"><mi>a</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr>\n      <mtd rowalign=\"top\">\n        <mi>a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v3/mtd_spec.rb"
+    },
+    {
+      "id": "v3/mtd/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr><mtd columnalign=\"center\"><mi>a</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr>\n      <mtd columnalign=\"center\">\n        <mi>a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v3/mtd_spec.rb"
+    },
+    {
+      "id": "v3/mtext/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtext>text</mtext></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtext>text</mtext>\n</math>",
+      "source": "spec/mml/v3/mtext_spec.rb"
+    },
+    {
+      "id": "v3/mtext/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtext>Hello World</mtext></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtext>Hello World</mtext>\n</math>",
+      "source": "spec/mml/v3/mtext_spec.rb"
+    },
+    {
+      "id": "v3/mtext/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtext></mtext></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtext></mtext>\n</math>",
+      "source": "spec/mml/v3/mtext_spec.rb"
+    },
+    {
+      "id": "v3/mtr/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr>\n      <mtd>\n        <mi>a</mi>\n      </mtd>\n      <mtd>\n        <mi>b</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v3/mtr_spec.rb"
+    },
+    {
+      "id": "v3/mtr/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr rowalign=\"top\"><mtd><mi>a</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr rowalign=\"top\">\n      <mtd>\n        <mi>a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v3/mtr_spec.rb"
+    },
+    {
+      "id": "v3/munder/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder><mo>(</mo><mo>&#x005F;</mo></munder></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munder>\n    <mo>(</mo>\n    <mo>_</mo>\n  </munder>\n</math>",
+      "source": "spec/mml/v3/munder_spec.rb"
+    },
+    {
+      "id": "v3/munder/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder><mo>∫</mo><mi>a</mi></munder></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munder>\n    <mo>∫</mo>\n    <mi>a</mi>\n  </munder>\n</math>",
+      "source": "spec/mml/v3/munder_spec.rb"
+    },
+    {
+      "id": "v3/munder/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder accentunder=\"true\"><mi>x</mi><mo>&#x0302;</mo></munder></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munder accentunder=\"true\">\n    <mi>x</mi>\n    <mo>̂</mo>\n  </munder>\n</math>",
+      "source": "spec/mml/v3/munder_spec.rb"
+    },
+    {
+      "id": "v3/munderover/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munderover><mo>∫</mo><mi>a</mi><mi>b</mi></munderover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munderover>\n    <mo>∫</mo>\n    <mi>a</mi>\n    <mi>b</mi>\n  </munderover>\n</math>",
+      "source": "spec/mml/v3/munderover_spec.rb"
+    },
+    {
+      "id": "v3/munderover/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munderover>\n    <mo>∑</mo>\n    <mrow>\n      <mi>i</mi>\n      <mo>=</mo>\n      <mn>1</mn>\n    </mrow>\n    <mi>n</mi>\n  </munderover>\n</math>",
+      "source": "spec/mml/v3/munderover_spec.rb"
+    },
+    {
+      "id": "v3/munderover/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munderover accent=\"true\"><mi>x</mi><mi>a</mi><mi>b</mi></munderover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munderover accent=\"true\">\n    <mi>x</mi>\n    <mi>a</mi>\n    <mi>b</mi>\n  </munderover>\n</math>",
+      "source": "spec/mml/v3/munderover_spec.rb"
+    },
+    {
+      "id": "v3/semantics/0",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><apply><plus/><apply><sin/><ci>x</ci></apply><cn>5</cn></apply><annotation-xml encoding=\"MathML-Presentation\"><mrow><mi>sin</mi><mo>&#x2061;</mo><mi>x</mi></mrow><mo>+</mo><mn>5</mn></annotation-xml></semantics></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <semantics>\n    <apply>\n      <plus/>\n      <apply>\n        <sin/>\n        <ci>x</ci>\n      </apply>\n      <cn>5</cn>\n    </apply>\n    <annotation-xml encoding=\"MathML-Presentation\">\n      <mrow>\n        <mi>sin</mi>\n        <mo>⁡</mo>\n        <mi>x</mi>\n      </mrow>\n      <mo>+</mo>\n      <mn>5</mn>\n    </annotation-xml>\n  </semantics>\n</math>",
+      "source": "spec/mml/v3/semantics_spec.rb"
+    },
+    {
+      "id": "v3/semantics/1",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics definitionURL=\"http://example.org/def\"><ci>x</ci></semantics></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <semantics definitionURL=\"http://example.org/def\">\n    <ci>x</ci>\n  </semantics>\n</math>",
+      "source": "spec/mml/v3/semantics_spec.rb"
+    },
+    {
+      "id": "v3/semantics/2",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics encoding=\"MathML-Presentation\"><ci>x</ci></semantics></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <semantics encoding=\"MathML-Presentation\">\n    <ci>x</ci>\n  </semantics>\n</math>",
+      "source": "spec/mml/v3/semantics_spec.rb"
+    },
+    {
+      "id": "v4/a/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><a href=\"#ref\"><mi>x</mi></a></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <a href=\"#ref\">\n    <mi>x</mi>\n  </a>\n</math>",
+      "source": "spec/mml/v4/a_spec.rb"
+    },
+    {
+      "id": "v4/a/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><a href=\"https://example.org\"><mi>x</mi></a></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <a href=\"https://example.org\">\n    <mi>x</mi>\n  </a>\n</math>",
+      "source": "spec/mml/v4/a_spec.rb"
+    },
+    {
+      "id": "v4/a/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><a hreflang=\"en\"><mi>x</mi></a></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <a hreflang=\"en\">\n    <mi>x</mi>\n  </a>\n</math>",
+      "source": "spec/mml/v4/a_spec.rb"
+    },
+    {
+      "id": "v4/apply/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><plus/><ci>x</ci><cn>1</cn></apply></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <apply>\n    <plus/>\n    <ci>x</ci>\n    <cn>1</cn>\n  </apply>\n</math>",
+      "source": "spec/mml/v4/apply_spec.rb"
+    },
+    {
+      "id": "v4/apply/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><plus/><apply><sin/><ci>x</ci></apply><cn>5</cn></apply></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <apply>\n    <plus/>\n    <apply>\n      <sin/>\n      <ci>x</ci>\n    </apply>\n    <cn>5</cn>\n  </apply>\n</math>",
+      "source": "spec/mml/v4/apply_spec.rb"
+    },
+    {
+      "id": "v4/apply/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply id=\"eq1\"><plus/><ci>x</ci><cn>1</cn></apply></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <apply id=\"eq1\">\n    <plus/>\n    <ci>x</ci>\n    <cn>1</cn>\n  </apply>\n</math>",
+      "source": "spec/mml/v4/apply_spec.rb"
+    },
+    {
+      "id": "v4/ci/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ci>x</ci></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <ci>x</ci>\n</math>",
+      "source": "spec/mml/v4/ci_spec.rb"
+    },
+    {
+      "id": "v4/cn/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><cn>42</cn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <cn>42</cn>\n</math>",
+      "source": "spec/mml/v4/cn_spec.rb"
+    },
+    {
+      "id": "v4/csymbol/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><csymbol>sin</csymbol></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <csymbol>sin</csymbol>\n</math>",
+      "source": "spec/mml/v4/csymbol_spec.rb"
+    },
+    {
+      "id": "v4/csymbol/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><csymbol definitionURL=\"http://example.org/def\">sin</csymbol></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <csymbol definitionURL=\"http://example.org/def\">sin</csymbol>\n</math>",
+      "source": "spec/mml/v4/csymbol_spec.rb"
+    },
+    {
+      "id": "v4/maction/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><maction actiontype=\"toggle\"><mi>x</mi><mi>y</mi></maction></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <maction actiontype=\"toggle\">\n    <mi>x</mi>\n    <mi>y</mi>\n  </maction>\n</math>",
+      "source": "spec/mml/v4/maction_spec.rb"
+    },
+    {
+      "id": "v4/maction/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><maction actiontype=\"toggle\"><mi>x</mi></maction></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <maction actiontype=\"toggle\">\n    <mi>x</mi>\n  </maction>\n</math>",
+      "source": "spec/mml/v4/maction_spec.rb"
+    },
+    {
+      "id": "v4/maligngroup/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><maligngroup/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <maligngroup/>\n</math>",
+      "source": "spec/mml/v4/maligngroup_spec.rb"
+    },
+    {
+      "id": "v4/maligngroup/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><maligngroup groupalign=\"left\"/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <maligngroup groupalign=\"left\"/>\n</math>",
+      "source": "spec/mml/v4/maligngroup_spec.rb"
+    },
+    {
+      "id": "v4/malignmark/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><malignmark/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <malignmark/>\n</math>",
+      "source": "spec/mml/v4/malignmark_spec.rb"
+    },
+    {
+      "id": "v4/math/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"/>",
+      "source": "spec/mml/v4/math_spec.rb"
+    },
+    {
+      "id": "v4/math/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mi>x</mi>\n</math>",
+      "source": "spec/mml/v4/math_spec.rb"
+    },
+    {
+      "id": "v4/math/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" intent=\"math:fraction\"><mfrac><mi>1</mi><mi>2</mi></mfrac></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" intent=\"math:fraction\">\n  <mfrac>\n    <mi>1</mi>\n    <mi>2</mi>\n  </mfrac>\n</math>",
+      "source": "spec/mml/v4/math_spec.rb"
+    },
+    {
+      "id": "v4/menclose/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><menclose notation=\"circle\"><mi>r</mi></menclose></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <menclose notation=\"circle\">\n    <mi>r</mi>\n  </menclose>\n</math>",
+      "source": "spec/mml/v4/menclose_spec.rb"
+    },
+    {
+      "id": "v4/merror/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><merror><mtext>Error</mtext></merror></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <merror>\n    <mtext>Error</mtext>\n  </merror>\n</math>",
+      "source": "spec/mml/v4/merror_spec.rb"
+    },
+    {
+      "id": "v4/mfenced/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfenced open=\"(\" close=\")\"><mi>x</mi></mfenced></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfenced open=\"(\" close=\")\">\n    <mi>x</mi>\n  </mfenced>\n</math>",
+      "source": "spec/mml/v4/mfenced_spec.rb"
+    },
+    {
+      "id": "v4/mfenced/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfenced open=\"[\" close=\"]\"><mi>x</mi></mfenced></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfenced open=\"[\" close=\"]\">\n    <mi>x</mi>\n  </mfenced>\n</math>",
+      "source": "spec/mml/v4/mfenced_spec.rb"
+    },
+    {
+      "id": "v4/mfrac/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac><mn>1</mn><mn>2</mn></mfrac></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfrac>\n    <mn>1</mn>\n    <mn>2</mn>\n  </mfrac>\n</math>",
+      "source": "spec/mml/v4/mfrac_spec.rb"
+    },
+    {
+      "id": "v4/mfrac/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac linethickness=\"2px\"><mn>1</mn><mn>2</mn></mfrac></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mfrac linethickness=\"2px\">\n    <mn>1</mn>\n    <mn>2</mn>\n  </mfrac>\n</math>",
+      "source": "spec/mml/v4/mfrac_spec.rb"
+    },
+    {
+      "id": "v4/mglyph/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mglyph src=\"glyph.png\" alt=\"glyph\"/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mglyph src=\"glyph.png\" alt=\"glyph\"/>\n</math>",
+      "source": "spec/mml/v4/mglyph_spec.rb"
+    },
+    {
+      "id": "v4/mi/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>sin</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mi>sin</mi>\n</math>",
+      "source": "spec/mml/v4/mi_spec.rb"
+    },
+    {
+      "id": "v4/mi/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>D</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mi>D</mi>\n</math>",
+      "source": "spec/mml/v4/mi_spec.rb"
+    },
+    {
+      "id": "v4/mlabeledtr/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mlabeledtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mlabeledtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mlabeledtr>\n      <mtd>\n        <mi>c</mi>\n      </mtd>\n      <mtd>\n        <mi>d</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v4/mlabeledtr_spec.rb"
+    },
+    {
+      "id": "v4/mlongdiv/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mlongdiv><msgroup><msrow><mn>1</mn><mo>+</mo><mn>2</mn></msrow></msgroup></mlongdiv></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mlongdiv>\n    <msgroup>\n      <msrow>\n        <mn>1</mn>\n        <mo>+</mo>\n        <mn>2</mn>\n      </msrow>\n    </msgroup>\n  </mlongdiv>\n</math>",
+      "source": "spec/mml/v4/mlongdiv_spec.rb"
+    },
+    {
+      "id": "v4/mlongdiv/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mlongdiv longdivstyle=\"right\"><msgroup><msrow><mn>1</mn></msrow></msgroup></mlongdiv></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mlongdiv longdivstyle=\"right\">\n    <msgroup>\n      <msrow>\n        <mn>1</mn>\n      </msrow>\n    </msgroup>\n  </mlongdiv>\n</math>",
+      "source": "spec/mml/v4/mlongdiv_spec.rb"
+    },
+    {
+      "id": "v4/mmultiscripts/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mmultiscripts><mi>x</mi><mprescripts/><none/><mn>2</mn></mmultiscripts></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mmultiscripts>\n    <mi>x</mi>\n    <mprescripts/>\n    <none/>\n    <mn>2</mn>\n  </mmultiscripts>\n</math>",
+      "source": "spec/mml/v4/mmultiscripts_spec.rb"
+    },
+    {
+      "id": "v4/mn/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>2</mn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mn>2</mn>\n</math>",
+      "source": "spec/mml/v4/mn_spec.rb"
+    },
+    {
+      "id": "v4/mn/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>0.123</mn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mn>0.123</mn>\n</math>",
+      "source": "spec/mml/v4/mn_spec.rb"
+    },
+    {
+      "id": "v4/mn/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>42</mn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mn>42</mn>\n</math>",
+      "source": "spec/mml/v4/mn_spec.rb"
+    },
+    {
+      "id": "v4/mo/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>+</mo></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mo>+</mo>\n</math>",
+      "source": "spec/mml/v4/mo_spec.rb"
+    },
+    {
+      "id": "v4/mo/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>-</mo></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mo>-</mo>\n</math>",
+      "source": "spec/mml/v4/mo_spec.rb"
+    },
+    {
+      "id": "v4/mo/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo form=\"prefix\">-</mo></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mo form=\"prefix\">-</mo>\n</math>",
+      "source": "spec/mml/v4/mo_spec.rb"
+    },
+    {
+      "id": "v4/mover/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mover><mo>∫</mo><mi>b</mi></mover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mover>\n    <mo>∫</mo>\n    <mi>b</mi>\n  </mover>\n</math>",
+      "source": "spec/mml/v4/mover_spec.rb"
+    },
+    {
+      "id": "v4/mover/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mover accent=\"true\"><mi>x</mi><mo>&#x005E;</mo></mover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mover accent=\"true\">\n    <mi>x</mi>\n    <mo>^</mo>\n  </mover>\n</math>",
+      "source": "spec/mml/v4/mover_spec.rb"
+    },
+    {
+      "id": "v4/mpadded/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mpadded width=\"+0.5em\"><mi>z</mi></mpadded></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mpadded width=\"+0.5em\">\n    <mi>z</mi>\n  </mpadded>\n</math>",
+      "source": "spec/mml/v4/mpadded_spec.rb"
+    },
+    {
+      "id": "v4/mphantom/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mphantom><mi>hidden</mi></mphantom></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mphantom>\n    <mi>hidden</mi>\n  </mphantom>\n</math>",
+      "source": "spec/mml/v4/mphantom_spec.rb"
+    },
+    {
+      "id": "v4/mprescripts/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mmultiscripts><mi>x</mi><mprescripts/></mmultiscripts></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mmultiscripts>\n    <mi>x</mi>\n    <mprescripts/>\n  </mmultiscripts>\n</math>",
+      "source": "spec/mml/v4/mprescripts_spec.rb"
+    },
+    {
+      "id": "v4/mroot/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mroot><mi>x</mi><mn>3</mn></mroot></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mroot>\n    <mi>x</mi>\n    <mn>3</mn>\n  </mroot>\n</math>",
+      "source": "spec/mml/v4/mroot_spec.rb"
+    },
+    {
+      "id": "v4/mrow/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mrow>\n    <mi>x</mi>\n    <mo>+</mo>\n    <mn>1</mn>\n  </mrow>\n</math>",
+      "source": "spec/mml/v4/mrow_spec.rb"
+    },
+    {
+      "id": "v4/mrow/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mi>x</mi><mo>+</mo><mrow><mi>a</mi><mo>/</mo><mi>b</mi></mrow></mrow></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mrow>\n    <mi>x</mi>\n    <mo>+</mo>\n    <mrow>\n      <mi>a</mi>\n      <mo>/</mo>\n      <mi>b</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "source": "spec/mml/v4/mrow_spec.rb"
+    },
+    {
+      "id": "v4/mrow/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow mathcolor=\"red\"><mi>x</mi></mrow></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mrow mathcolor=\"red\">\n    <mi>x</mi>\n  </mrow>\n</math>",
+      "source": "spec/mml/v4/mrow_spec.rb"
+    },
+    {
+      "id": "v4/ms/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ms>hello</ms></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <ms>hello</ms>\n</math>",
+      "source": "spec/mml/v4/ms_spec.rb"
+    },
+    {
+      "id": "v4/ms/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ms>test</ms></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <ms>test</ms>\n</math>",
+      "source": "spec/mml/v4/ms_spec.rb"
+    },
+    {
+      "id": "v4/ms/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ms mathvariant=\"bold\">warning</ms></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <ms mathvariant=\"bold\">warning</ms>\n</math>",
+      "source": "spec/mml/v4/ms_spec.rb"
+    },
+    {
+      "id": "v4/mscarries/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mscarries><mscarry><mn>1</mn></mscarry></mscarries></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mscarries>\n    <mscarry>\n      <mn>1</mn>\n    </mscarry>\n  </mscarries>\n</math>",
+      "source": "spec/mml/v4/mscarries_spec.rb"
+    },
+    {
+      "id": "v4/mscarry/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><mscarry><mn>1</mn></mscarry></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <mscarry>\n      <mn>1</mn>\n    </mscarry>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/mscarry_spec.rb"
+    },
+    {
+      "id": "v4/mscarry/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><mscarry location=\"n\"><mn>1</mn></mscarry></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <mscarry location=\"n\">\n      <mn>1</mn>\n    </mscarry>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/mscarry_spec.rb"
+    },
+    {
+      "id": "v4/msgroup/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msgroup><msrow><mn>1</mn><mo>+</mo><mn>2</mn></msrow></msgroup></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msgroup>\n      <msrow>\n        <mn>1</mn>\n        <mo>+</mo>\n        <mn>2</mn>\n      </msrow>\n    </msgroup>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/msgroup_spec.rb"
+    },
+    {
+      "id": "v4/msgroup/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msgroup position=\"1\"><msrow><mn>1</mn></msrow></msgroup></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msgroup position=\"1\">\n      <msrow>\n        <mn>1</mn>\n      </msrow>\n    </msgroup>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/msgroup_spec.rb"
+    },
+    {
+      "id": "v4/msgroup/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msgroup shift=\"2\"><msrow><mn>1</mn></msrow></msgroup></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msgroup shift=\"2\">\n      <msrow>\n        <mn>1</mn>\n      </msrow>\n    </msgroup>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/msgroup_spec.rb"
+    },
+    {
+      "id": "v4/msline/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msline/></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msline/>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/msline_spec.rb"
+    },
+    {
+      "id": "v4/msline/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msline position=\"1\"/></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msline position=\"1\"/>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/msline_spec.rb"
+    },
+    {
+      "id": "v4/mspace/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mspace width=\"1em\"/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mspace width=\"1em\"/>\n</math>",
+      "source": "spec/mml/v4/mspace_spec.rb"
+    },
+    {
+      "id": "v4/mspace/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mspace width=\"2em\"/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mspace width=\"2em\"/>\n</math>",
+      "source": "spec/mml/v4/mspace_spec.rb"
+    },
+    {
+      "id": "v4/msqrt/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msqrt><mi>x</mi></msqrt></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msqrt>\n    <mi>x</mi>\n  </msqrt>\n</math>",
+      "source": "spec/mml/v4/msqrt_spec.rb"
+    },
+    {
+      "id": "v4/msrow/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msrow><mn>1</mn><mo>+</mo><mn>2</mn></msrow></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msrow>\n      <mn>1</mn>\n      <mo>+</mo>\n      <mn>2</mn>\n    </msrow>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/msrow_spec.rb"
+    },
+    {
+      "id": "v4/msrow/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msrow position=\"2\"><mn>1</mn></msrow></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msrow position=\"2\">\n      <mn>1</mn>\n    </msrow>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/msrow_spec.rb"
+    },
+    {
+      "id": "v4/mstack/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack><msrow><mn>1</mn><mo>+</mo><mn>2</mn></msrow><msline/><msrow><mn>3</mn></msrow></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack>\n    <msrow>\n      <mn>1</mn>\n      <mo>+</mo>\n      <mn>2</mn>\n    </msrow>\n    <msline/>\n    <msrow>\n      <mn>3</mn>\n    </msrow>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/mstack_spec.rb"
+    },
+    {
+      "id": "v4/mstack/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstack align=\"right\"><msrow><mn>1</mn></msrow></mstack></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstack align=\"right\">\n    <msrow>\n      <mn>1</mn>\n    </msrow>\n  </mstack>\n</math>",
+      "source": "spec/mml/v4/mstack_spec.rb"
+    },
+    {
+      "id": "v4/mstyle/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstyle mathcolor=\"red\"><mi>y</mi></mstyle></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstyle mathcolor=\"red\">\n    <mi>y</mi>\n  </mstyle>\n</math>",
+      "source": "spec/mml/v4/mstyle_spec.rb"
+    },
+    {
+      "id": "v4/mstyle/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstyle displaystyle=\"true\"><mi>y</mi></mstyle></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstyle displaystyle=\"true\">\n    <mi>y</mi>\n  </mstyle>\n</math>",
+      "source": "spec/mml/v4/mstyle_spec.rb"
+    },
+    {
+      "id": "v4/mstyle/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mstyle mathsize=\"big\"><mi>y</mi></mstyle></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mstyle mathsize=\"big\">\n    <mi>y</mi>\n  </mstyle>\n</math>",
+      "source": "spec/mml/v4/mstyle_spec.rb"
+    },
+    {
+      "id": "v4/msub/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>a</mi><mn>1</mn></msub></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msub>\n    <mi>a</mi>\n    <mn>1</mn>\n  </msub>\n</math>",
+      "source": "spec/mml/v4/msub_spec.rb"
+    },
+    {
+      "id": "v4/msub/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub subscriptshift=\"0.5em\"><mi>x</mi><mn>1</mn></msub></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msub subscriptshift=\"0.5em\">\n    <mi>x</mi>\n    <mn>1</mn>\n  </msub>\n</math>",
+      "source": "spec/mml/v4/msub_spec.rb"
+    },
+    {
+      "id": "v4/msubsup/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msubsup>\n    <mi>x</mi>\n    <mn>1</mn>\n    <mn>2</mn>\n  </msubsup>\n</math>",
+      "source": "spec/mml/v4/msubsup_spec.rb"
+    },
+    {
+      "id": "v4/msubsup/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup subscriptshift=\"0.5em\" superscriptshift=\"0.5em\"><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msubsup subscriptshift=\"0.5em\" superscriptshift=\"0.5em\">\n    <mi>x</mi>\n    <mn>1</mn>\n    <mn>2</mn>\n  </msubsup>\n</math>",
+      "source": "spec/mml/v4/msubsup_spec.rb"
+    },
+    {
+      "id": "v4/msup/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msup><mi>x</mi><mn>2</mn></msup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msup>\n    <mi>x</mi>\n    <mn>2</mn>\n  </msup>\n</math>",
+      "source": "spec/mml/v4/msup_spec.rb"
+    },
+    {
+      "id": "v4/msup/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msup superscriptshift=\"0.3em\"><mi>x</mi><mn>2</mn></msup></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <msup superscriptshift=\"0.3em\">\n    <mi>x</mi>\n    <mn>2</mn>\n  </msup>\n</math>",
+      "source": "spec/mml/v4/msup_spec.rb"
+    },
+    {
+      "id": "v4/mtable/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr>\n      <mtd>\n        <mi>a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v4/mtable_spec.rb"
+    },
+    {
+      "id": "v4/mtable/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr>\n      <mtd>\n        <mn>1</mn>\n      </mtd>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n    </mtr>\n    <mtr>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n      <mtd>\n        <mn>1</mn>\n      </mtd>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n    </mtr>\n    <mtr>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n      <mtd>\n        <mn>0</mn>\n      </mtd>\n      <mtd>\n        <mn>1</mn>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v4/mtable_spec.rb"
+    },
+    {
+      "id": "v4/mtable/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable align=\"center\"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable align=\"center\">\n    <mtr>\n      <mtd>\n        <mi>a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v4/mtable_spec.rb"
+    },
+    {
+      "id": "v4/mtext/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtext>text</mtext></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtext>text</mtext>\n</math>",
+      "source": "spec/mml/v4/mtext_spec.rb"
+    },
+    {
+      "id": "v4/mtext/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtext>sample text</mtext></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtext>sample text</mtext>\n</math>",
+      "source": "spec/mml/v4/mtext_spec.rb"
+    },
+    {
+      "id": "v4/mtext/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtext mathcolor=\"green\">green text</mtext></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtext mathcolor=\"green\">green text</mtext>\n</math>",
+      "source": "spec/mml/v4/mtext_spec.rb"
+    },
+    {
+      "id": "v4/mtr/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr>\n      <mtd>\n        <mi>a</mi>\n      </mtd>\n      <mtd>\n        <mi>b</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v4/mtr_spec.rb"
+    },
+    {
+      "id": "v4/mtr/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mtable><mtr rowalign=\"top\"><mtd><mi>a</mi></mtd></mtr></mtable></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mtable>\n    <mtr rowalign=\"top\">\n      <mtd>\n        <mi>a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+      "source": "spec/mml/v4/mtr_spec.rb"
+    },
+    {
+      "id": "v4/munder/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder><mo>∫</mo><mi>a</mi></munder></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munder>\n    <mo>∫</mo>\n    <mi>a</mi>\n  </munder>\n</math>",
+      "source": "spec/mml/v4/munder_spec.rb"
+    },
+    {
+      "id": "v4/munder/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder accentunder=\"true\"><mi>x</mi><mo>&#x0302;</mo></munder></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munder accentunder=\"true\">\n    <mi>x</mi>\n    <mo>̂</mo>\n  </munder>\n</math>",
+      "source": "spec/mml/v4/munder_spec.rb"
+    },
+    {
+      "id": "v4/munderover/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munderover><mo>∫</mo><mi>a</mi><mi>b</mi></munderover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munderover>\n    <mo>∫</mo>\n    <mi>a</mi>\n    <mi>b</mi>\n  </munderover>\n</math>",
+      "source": "spec/mml/v4/munderover_spec.rb"
+    },
+    {
+      "id": "v4/munderover/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munderover accent=\"true\"><mi>x</mi><mi>a</mi><mi>b</mi></munderover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munderover accent=\"true\">\n    <mi>x</mi>\n    <mi>a</mi>\n    <mi>b</mi>\n  </munderover>\n</math>",
+      "source": "spec/mml/v4/munderover_spec.rb"
+    },
+    {
+      "id": "v4/munderover/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><munderover accentunder=\"true\"><mi>x</mi><mi>a</mi><mi>b</mi></munderover></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <munderover accentunder=\"true\">\n    <mi>x</mi>\n    <mi>a</mi>\n    <mi>b</mi>\n  </munderover>\n</math>",
+      "source": "spec/mml/v4/munderover_spec.rb"
+    },
+    {
+      "id": "v4/none/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><none/></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <none/>\n</math>",
+      "source": "spec/mml/v4/none_spec.rb"
+    },
+    {
+      "id": "v4/semantics/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><apply><plus/><apply><sin/><ci>x</ci></apply><cn>5</cn></apply><annotation-xml encoding=\"MathML-Presentation\"><mrow><mi>sin</mi><mo>&#x2061;</mo><mi>x</mi></mrow><mo>+</mo><mn>5</mn></annotation-xml></semantics></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <semantics>\n    <apply>\n      <plus/>\n      <apply>\n        <sin/>\n        <ci>x</ci>\n      </apply>\n      <cn>5</cn>\n    </apply>\n    <annotation-xml encoding=\"MathML-Presentation\">\n      <mrow>\n        <mi>sin</mi>\n        <mo>⁡</mo>\n        <mi>x</mi>\n      </mrow>\n      <mo>+</mo>\n      <mn>5</mn>\n    </annotation-xml>\n  </semantics>\n</math>",
+      "source": "spec/mml/v4/semantics_spec.rb"
+    },
+    {
+      "id": "v4/semantics/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics definitionURL=\"http://example.org/def\"><ci>x</ci></semantics></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <semantics definitionURL=\"http://example.org/def\">\n    <ci>x</ci>\n  </semantics>\n</math>",
+      "source": "spec/mml/v4/semantics_spec.rb"
+    },
+    {
+      "id": "v4/semantics/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics encoding=\"MathML-Presentation\"><ci>x</ci></semantics></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <semantics encoding=\"MathML-Presentation\">\n    <ci>x</ci>\n  </semantics>\n</math>",
+      "source": "spec/mml/v4/semantics_spec.rb"
+    },
+    {
+      "id": "v4/wildcard_attributes/0",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns='http://www.w3.org/1998/Math/MathML' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'><mi id='i' mathcolor='red' data-foo='1' onclick='x()' xsi:type='t'>x</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <mi id=\"i\" mathcolor=\"red\" data-foo=\"1\" onclick=\"x()\" type=\"t\">x</mi>\n</math>",
+      "source": "spec/mml/v4/wildcard_attributes_spec.rb"
+    },
+    {
+      "id": "v4/wildcard_attributes/1",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns='http://www.w3.org/1998/Math/MathML'><mi id='i' mathcolor='red' data-foo='1' onclick='x()'>x</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <mi id=\"i\" mathcolor=\"red\" data-foo=\"1\" onclick=\"x()\">x</mi>\n</math>",
+      "source": "spec/mml/v4/wildcard_attributes_spec.rb"
+    },
+    {
+      "id": "v4/wildcard_attributes/2",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns='http://www.w3.org/1998/Math/MathML'><cn data-name='n'>1</cn></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n  <cn data-name=\"n\">1</cn>\n</math>",
+      "source": "spec/mml/v4/wildcard_attributes_spec.rb"
+    }
+  ],
+  "ruby_refusals": [],
+  "excluded": []
+}
