@@ -130,6 +130,19 @@ class NativeMathMLTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 model.snapshot()
 
+    def test_frozen_ruby_source_xml204(self):
+        from hashlib import sha256
+        folder = Path(__file__).with_name("fixtures")
+        raw = (folder / "ruby-source-xml204.json").read_bytes()
+        receipt = json.loads((folder / "ruby-source-xml204.provenance.json").read_bytes())
+        self.assertEqual(sha256(raw).hexdigest(), receipt["sha256"])
+        rows = json.loads(raw)["rows"]
+        self.assertEqual(len(rows), 204)
+        for row in rows:
+            with self.subTest(id=row["id"], version=row["version"]):
+                with parse(row["input"], version=row["version"], model=row["model"]) as model:
+                    self.assertEqual(xml_tree(model.to_xml()), xml_tree(row["expected_xml"]))
+
     def test_runtime_manifest_and_arguments(self):
         for version, count in ((3, 194), (4, 195)):
             info = runtime_info(version)
