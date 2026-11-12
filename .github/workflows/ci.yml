@@ -26,6 +26,19 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: '1.95.0'
+      - name: Reuse only the matching native source and compiler cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry/src
+            ~/.cargo/registry/cache
+            ~/.cargo/registry/index
+            ~/.cargo/git/db
+            ~/.cargo/git/checkouts
+            .native-src/target
+            .native-src/rust
+            .native-src/framework
+          key: mml-native-${{ runner.os }}-${{ runner.arch }}-rust195-${{ hashFiles('ci/native-source.json', 'build_native.py') }}
       - name: Verify native notice provenance helpers
         run: python -m unittest discover -s tests -p test_build_native.py -v
       - name: Build the pinned public native library once

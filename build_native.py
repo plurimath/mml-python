@@ -49,7 +49,7 @@ def capture_runtime_notices(metadata, destination, source_roots=()):
             target = notices / directory / name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(original, target)
-            copied[str(target.relative_to(notices))] = hashlib.sha256(target.read_bytes()).hexdigest()
+            copied[target.relative_to(notices).as_posix()] = hashlib.sha256(target.read_bytes()).hexdigest()
         records.append({"name": package["name"], "version": package["version"],
                         "cargo_id": identity, "source": package.get("source"),
                         "license": package.get("license"), "files": copied,
