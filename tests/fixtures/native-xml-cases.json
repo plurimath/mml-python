@@ -1,0 +1,49 @@
+{
+  "format": "mml-xml-corpus-candidates/1",
+  "source": "fcea7a90e2bdaf7e7639ef509bcfd933be8eeda2",
+  "framework": "fd2989fd8478b1ecb2508d98fa2d66792c09c72b",
+  "rows": [
+    {
+      "id": "v3-mi-mixed",
+      "version": 3,
+      "model": "Mi",
+      "input": "<mi xmlns=\"http://www.w3.org/1998/Math/MathML\">x<malignmark/>y<mglyph src=\"g.png\" alt=\"g\"/>z</mi>",
+      "expected_xml": "<mi xmlns=\"http://www.w3.org/1998/Math/MathML\">x<malignmark/>y<mglyph src=\"g.png\" alt=\"g\"/>z</mi>"
+    },
+    {
+      "id": "v3-mi-prefixed",
+      "version": 3,
+      "model": "Mi",
+      "input": "<m:mi xmlns:m=\"http://www.w3.org/1998/Math/MathML\" mathvariant=\"bold\">alpha</m:mi>",
+      "expected_xml": "<m:mi xmlns:m=\"http://www.w3.org/1998/Math/MathML\" mathvariant=\"bold\">alpha</m:mi>"
+    },
+    {
+      "id": "v3-math-nested",
+      "version": 3,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>a</mi><mo>+</mo><mfrac><mi>x<malignmark/>y</mi><mrow><mn>1</mn><mo>+</mo><mn>2</mn></mrow></mfrac><mi>b</mi></mrow><mi>c</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\n  <mrow>\n    <mi>a</mi>\n    <mo>+</mo>\n    <mfrac>\n      <mi>x<malignmark/>y</mi>\n      <mrow>\n        <mn>1</mn>\n        <mo>+</mo>\n        <mn>2</mn>\n      </mrow>\n    </mfrac>\n    <mi>b</mi>\n  </mrow>\n  <mi>c</mi>\n</math>"
+    },
+    {
+      "id": "v4-mi-mixed",
+      "version": 4,
+      "model": "Mi",
+      "input": "<mi xmlns=\"http://www.w3.org/1998/Math/MathML\">x<malignmark/>y<mglyph src=\"g.png\" alt=\"g\"/>z</mi>",
+      "expected_xml": "<mi xmlns=\"http://www.w3.org/1998/Math/MathML\">x<malignmark/>y<mglyph src=\"g.png\" alt=\"g\"/>z</mi>"
+    },
+    {
+      "id": "v4-mi-prefixed",
+      "version": 4,
+      "model": "Mi",
+      "input": "<m:mi xmlns:m=\"http://www.w3.org/1998/Math/MathML\" mathvariant=\"bold\">alpha</m:mi>",
+      "expected_xml": "<m:mi xmlns:m=\"http://www.w3.org/1998/Math/MathML\" mathvariant=\"bold\">alpha</m:mi>"
+    },
+    {
+      "id": "v4-math-nested",
+      "version": 4,
+      "model": "Math",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>a</mi><mo>+</mo><mfrac><mi>x<malignmark/>y</mi><mrow><mn>1</mn><mo>+</mo><mn>2</mn></mrow></mfrac><mi>b</mi></mrow><mi>c</mi></math>",
+      "expected_xml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\">\n  <mrow>\n    <mi>a</mi>\n    <mo>+</mo>\n    <mfrac>\n      <mi>x<malignmark/>y</mi>\n      <mrow>\n        <mn>1</mn>\n        <mo>+</mo>\n        <mn>2</mn>\n      </mrow>\n    </mfrac>\n    <mi>b</mi>\n  </mrow>\n  <mi>c</mi>\n</math>"
+    }
+  ]
+}
