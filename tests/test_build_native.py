@@ -27,9 +27,11 @@ class NoticeCaptureTests(unittest.TestCase):
             destination.mkdir()
             capture_runtime_notices(metadata, destination)
             notices = destination / "runtime-licenses"
-            self.assertEqual((notices / "licensed-1/LICENSE-MIT").read_bytes(), text)
             records = json.loads((notices / "manifest.json").read_text())["packages"]
-            self.assertEqual(records[0]["files"], {"licensed-1/LICENSE-MIT": hashlib.sha256(text).hexdigest()})
+            self.assertEqual(len(records[0]["files"]), 1)
+            name, expected = next(iter(records[0]["files"].items()))
+            self.assertEqual((notices / name).read_bytes(), text)
+            self.assertEqual(expected, hashlib.sha256(text).hexdigest())
             self.assertFalse(records[0]["missing_upstream_text"])
             self.assertTrue(records[1]["missing_upstream_text"])
             self.assertEqual(records[1]["files"], {})
@@ -45,3 +47,19 @@ class NoticeCaptureTests(unittest.TestCase):
             metadata["packages"][0]["manifest_path"] = str(root / "missing/Cargo.toml")
             with self.assertRaisesRegex(RuntimeError, "Missing resolved notice source"):
                 capture_runtime_notices(metadata, root)
+
+    def test_repository_license_covers_nested_native_workspace(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            native = root / "native"
+            native.mkdir()
+            (root / "LICENSE.md").write_bytes(b"Actual repository license\n")
+            metadata = {"packages": [{"name": "native", "version": "1",
+                         "manifest_path": str(native / "Cargo.toml"), "license": None}]}
+            destination = root / "output"
+            destination.mkdir()
+            capture_runtime_notices(metadata, destination, (root,))
+            notices = destination / "runtime-licenses"
+            entry = json.loads((notices / "manifest.json").read_text())["packages"][0]
+            self.assertFalse(entry["missing_upstream_text"])
+            self.assertTrue(any(name.endswith("/repository-LICENSE.md") for name in entry["files"]))

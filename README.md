@@ -39,3 +39,8 @@ The native candidate records absent text content as absent.
 Ruby null/default getters and native field presence are recorded separately.
 These cases remain explicit compatibility differences in the qualification
 receipt.
+
+Public-source builds use the pinned native workspace lock and SDK Git revision.
+The wheel retains original model-source notices under `licenses`;
+`runtime-licenses/manifest.json` records actual resolved build-source notices,
+including explicit missing-upstream-text entries.

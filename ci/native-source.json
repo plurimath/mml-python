@@ -7,13 +7,15 @@
     "kind": "mml-dual",
     "repository": "plurimath/mml-rs",
     "local": "workspace/xml-native/mml-rs",
-    "revision": "58e7a3242baf7b0f1b1c78c9aa1ec7f116a41b3b",
-    "public": false,
+    "revision": "8cd34c5494e46a92e138a5da00cbf07f09c6a850",
+    "public": true,
     "framework": {
       "repository": "suleman-uzair/lutaml-rs",
       "revision": "3855de1ab72a7a750c3b72c010b11b22c7ec29a0",
       "public": true
-    }
+    },
+    "lockfile": "native/Cargo.lock",
+    "cargo_lock_sha256": "5871fe516c9b19fe9cd3a92de9b29af1093f8a7d3974b975ef4e3aa47b540c22"
   },
   "data": null,
   "tests": [
