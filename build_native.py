@@ -132,7 +132,7 @@ def main():
         "cargo_metadata_sha256": hashlib.sha256(metadata_bytes).hexdigest(),
         "runtime_notices": "runtime-licenses/manifest.json",
         "format": "mml-native-python/1",
-        "model_manifest": json.loads((source / "model" / "manifest.json").read_text()),
+        "model_manifest": json.loads((source / "model" / "manifest.json").read_text(encoding="utf-8")),
         "libraries": libraries,
         "framework_source": str(framework),
         "rust_source": str(source),

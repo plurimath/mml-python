@@ -27,7 +27,7 @@ class NoticeCaptureTests(unittest.TestCase):
             destination.mkdir()
             capture_runtime_notices(metadata, destination)
             notices = destination / "runtime-licenses"
-            records = json.loads((notices / "manifest.json").read_text())["packages"]
+            records = json.loads((notices / "manifest.json").read_text(encoding="utf-8"))["packages"]
             self.assertEqual(len(records[0]["files"]), 1)
             name, expected = next(iter(records[0]["files"].items()))
             self.assertEqual((notices / name).read_bytes(), text)
@@ -60,6 +60,6 @@ class NoticeCaptureTests(unittest.TestCase):
             destination.mkdir()
             capture_runtime_notices(metadata, destination, (root,))
             notices = destination / "runtime-licenses"
-            entry = json.loads((notices / "manifest.json").read_text())["packages"][0]
+            entry = json.loads((notices / "manifest.json").read_text(encoding="utf-8"))["packages"][0]
             self.assertFalse(entry["missing_upstream_text"])
             self.assertTrue(any(name.endswith("/repository-LICENSE.md") for name in entry["files"]))
