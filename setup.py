@@ -1,13 +1,18 @@
 from pathlib import Path
 import sys
-from setuptools import setup, find_packages
+from setuptools import Distribution, setup, find_packages
 from wheel.bdist_wheel import bdist_wheel
 
-class NativeWheel(bdist_wheel):
-    def finalize_options(self):
-        super().finalize_options()
-        self.root_is_pure = False
 
+class NativeDistribution(Distribution):
+    # The wheel bundles ctypes-loaded native libraries, so it must be a
+    # platlib wheel. Without this, setuptools installs the package into
+    # .data/purelib and auditwheel rejects the wheel.
+    def has_ext_modules(self):
+        return True
+
+
+class NativeWheel(bdist_wheel):
     def get_tag(self):
         _, _, platform = super().get_tag()
         return "py3", "none", platform
@@ -29,5 +34,6 @@ setup(
                           "_native/licenses/manifest.json",
                           "_native/licenses/*/*", "_native/runtime-licenses/manifest.json",
                           "_native/runtime-licenses/*/*"]},
-    python_requires=">=3.10", cmdclass={"bdist_wheel": NativeWheel},
+    python_requires=">=3.10", distclass=NativeDistribution,
+    cmdclass={"bdist_wheel": NativeWheel},
 )
