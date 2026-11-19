@@ -7,16 +7,16 @@
     "kind": "mml-dual",
     "repository": "plurimath/mml-rs",
     "local": "workspace/xml-native/mml-rs",
-    "revision": "d1c79cb567553402f0ccac76af3bf8523459386c",
+    "revision": "82f83c2f81d38dae3633505e6abf8856951544e4",
     "public": true,
     "framework": {
       "repository": "suleman-uzair/lutaml-rs",
-      "revision": "0d1a93de8ed4d80824c6e341ab95fede3e94b48a",
+      "revision": "828275bd28facc7af8caf5c0fa402ec6962369df",
       "public": true,
       "note": "TEMPORARY fork pin (lutaml/lutaml-rs#10 head): pin to lutaml merge commit once lutaml-rs#10 / lutaml-ts#3 land."
     },
     "lockfile": "native/Cargo.lock",
-    "cargo_lock_sha256": "32beb0fa0f26e66d1d646bdce9213a6575046cb34ce7e502ab82227c0071e525"
+    "cargo_lock_sha256": "fbd5ac3326747ab0fa7ea94a2f9e010a312427c30ed5d80fb9d438960fd3e26e"
   },
   "data": null,
   "tests": [
