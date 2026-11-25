@@ -1,5 +1,6 @@
 # CI working folders
 .ci-evidence/
+.testsuite/
 .ci-venv/
 .ci-build-venv/
 .native/
